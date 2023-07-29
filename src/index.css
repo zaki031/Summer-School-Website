@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+  font-family: 'Inter', sans-serif;
+}
+#bg{
+  width: 100%; height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 10%;
+  
+}
+#gradiant{
+  width: 100%;
+  opacity: 30%;
+}
+#register,
+#logo{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+
+}
+.container{
+  
+  text-align: center;
+
+ 
+} 
+#register{
+  margin-top: 50px;
+}
+
+#palm{
+  position: fixed;
+  bottom: 0; left: 0;
+}
+.h{
+  margin-top: 80px;
+}
+#h{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+
+
+
+form{
+  padding: 50px;
+  margin-left: auto; margin-right: auto;
+}
+
+.form-grid {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  font-weight: bold;
+}
+.form-group input {
+  padding: 5px;
+  border-style: solid;
+  font-size: 16px;
+  padding-left: 10px;
+  border-right: none; border-top:  none; border-left: none ;
+  border-width: 0.5px;
+
+
+  height: 40px;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+
+}
+.form-group textarea {
+  padding: 5px;
+  font-size: 16px;
+}
+.form-group select {
+  padding: 5px;
+  font-size: 16px;
+}
+.submit-btn {
+  margin-top: 5px;
+ 
+}
+.submit-btn button{
+  padding: 20px;
+  padding-right:50px ;padding-left:50px;
+  background-color: #F68915;
+  color: white ;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+label{
+  color: #586166;
+  margin-bottom: 5px;
+}
+span{
+  color: #F68915;
+}
+#training{
+  padding-right: 60px;
+}
+
+
+#p1{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+#p2{
+  position: absolute;
+  top:  70%;
+  left: 5%;
+}
+#p3{
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  width: 60px;
+  height: 60px;
+
+}
+#p4{
+  position: absolute;
+  top: 80%;
+  right: 10%;
+}
+form{
+  background-color: rgba(235, 235, 235, 0.397);
+  border-radius: 12px;
+  box-shadow: 5px 7px #dfdcdcaf;
+
+}
+.file,
+.fields,
+.phone,
+.email,
+.discord,
+.firstname{
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 1px 2px #dfdcdcaf;
+
+  
+}
