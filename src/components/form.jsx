@@ -1,5 +1,4 @@
 import React from 'react'
-import blur from "../images/blur.png"
 const Form = () => {
   return (
     <div>

@@ -12,10 +12,10 @@ function App() {
     <div className="App">  
 
     <div className='container'>
-    <img src={points} id='p1'></img>
-    <img src={points} id='p2'></img>
-    <img src={points} id='p3'></img>
-    <img src={points} id='p4'></img>
+    <img src={points} id='p1' alt="img"></img>
+    <img src={points} id='p2'alt="img"></img>
+    <img src={points} id='p3'alt="img"></img>
+    <img src={points} id='p4'alt="img"></img>
     <img id="logo"  src={logo}  alt='logo' />
 
 
