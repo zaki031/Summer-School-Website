@@ -10,27 +10,27 @@ import points from "./images/points.png"
 import {FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter} from "react-icons/fa"
 import { useEffect } from "react";
 import AOS from "aos";
+import 'aos/dist/aos.css'
 function App() {
   useEffect(() => {
-    AOS.init();
-    AOS.refresh();
+    AOS.init({duration:1000});
   }, []);
   return (
     <div className="App">  
     <img src={circles} alt='circles' id="circles"></img>
     <div className='container'>
-    <img src={points} id='p1' alt="img"></img>
-    <img src={points} id='p2'alt="img"></img>
-    <img src={points} id='p3'alt="img"></img>
-    <img src={points} id='p4'alt="img"></img>
+    <img src={points} data-aos="zoom-in" id='p1' alt="img"></img>
+    <img src={points} data-aos="zoom-in" id='p2'alt="img"></img>
+    <img src={points} data-aos="zoom-in" id='p3'alt="img"></img>
+    <img src={points} data-aos="zoom-in" id='p4'alt="img"></img>
     <img id="logo" data-aos="fade-up"  src={logo}  alt='logo' />
 
 
-    <img id="register"  src={register}  alt='register ' />
-    <img id="palm"  src={palm}  alt='background ' />
+    <img id="register"  data-aos="fade-up"  src={register}  alt='register ' />
+    <img id="palm"  data-aos="fade-right" src={palm}  alt='background ' />
 
     <img id="bg"  src={background}  alt='background ' />
-    <div className='h'>
+    <div className='h' data-aos="fade-up">
     <p >to be a part of this amazing summer.</p>
 
       <p id='h'>Fill the information carefully</p>

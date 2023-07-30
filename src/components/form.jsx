@@ -3,6 +3,8 @@ import Swal from 'sweetalert2'
 import axios from 'axios';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import AOS from "aos";
+import 'aos/dist/aos.css'
 
 const Form = () => {
   
@@ -122,35 +124,35 @@ const Form = () => {
 
 <form class="form-grid" ref={form} onSubmit={sendEmail}  >
     <div class="form-group">
-      <div className='firstname'>
+      <div className='firstname' data-aos="fade-right">
       <label for="fullname"  >Full Name <span>*</span></label>
       <input type="text" placeholder='Enter your fullname' id="fullname" name="fullname" required/>
       </div>
       
     </div>
     <div class="form-group">
-      <div className='discord'>
+      <div className='discord ' data-aos="fade-left">
       <label for="discord">Discord ID <span>*</span></label>
       <input type="text" id="discord"placeholder='Enter your discord ID' name="discord" required/>
       </div>
    
     </div>
     <div class="form-group">
-      <div className='email'>
+      <div className='email' data-aos="fade-right">
       <label for="email">Email Address <span>*</span></label>
       <input type="email" placeholder='Enter your E-mail' id="email" name="from_email" required/>
       </div>
 
     </div>
     <div class="form-group">
-      <div className='phone'>
+      <div className='phone' data-aos="fade-left">
           <label for="phone">Phone Number <span>*</span></label>
       <input type="tel" id="phone" placeholder='Enter your phone number' name="phone" required/>
       </div>
     
     </div>
     <div class="form-group">
-      <div className='fields'>
+      <div className='fields' data-aos="fade-right">
         <label for="training">First Training Field <span>*</span></label>
         <select name="firstField" value={firstField} onChange={handleFirstFieldInputChange}>
 
@@ -170,7 +172,7 @@ const Form = () => {
       
     </div>
     <div class="form-group">
-      <div className='fields'>
+      <div className='fields' data-aos="fade-left">
         <label for="training">Second Training Field <span>*</span></label>
       <select name='secondField' value={secondField} onChange={handlesecondFieldInputChange}>
   <option selected value="0">Select your second field</option>
@@ -187,7 +189,7 @@ const Form = () => {
     </div>
 
     <div class="form-group">
-      <div className='fields'>
+      <div className='fields' data-aos="fade-right">
         <label for="training">Where did you hear about us? <span>*</span></label>
       <select name='secondField' value={where} onChange={handleWhereInputChange}>
   <option selected value="0">Select your second field</option>
