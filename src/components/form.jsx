@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'
+import axios from 'axios';
 
 const Form = () => {
-
+  
   const [formData, setFormData] = useState({
     
     fullName: '',
@@ -12,20 +13,31 @@ const Form = () => {
     firstField: '',
     second_Field: '',
   });
+  const meanings = {
+    '1': "Web Dev",
+    '2': "Introductionto Ai and Data Science",
+    '3': "3D Design",
+    '4': "Graphic Design Theory",
+    '5': "Introduction to UI/UX Design",
+    '6': "Linux",
 
+    // Add more meanings as needed
+  };
 
+ 
 
   const [firstField, setfirstField] = useState('');
   const [secondField, setsecondField] = useState('');
+  const apiKey = process.env.REACT_APP_API_URL;
 
   // Step 3: Event handler to capture the selected value
   const handleFirstFieldInputChange = (event) => {
     const value = event.target.value;
-    setfirstField(value);
+    setfirstField(meanings[value]);
   };
   const handlesecondFieldInputChange = (event) => {
     const value = event.target.value;
-    setsecondField(value);
+    setsecondField(meanings[value]);
   };
 
 
@@ -41,14 +53,33 @@ const Form = () => {
 
 
     });
-    Swal.fire(
-      'Good job!',
-      'Your Submission has been sent!',
-      'success',
-
-    )
     
-    console.log(formData);
+
+    axios
+	.post(apiKey, {
+    fullName: e.target.elements.fullname.value,
+    discordID: e.target.elements.discord.value,
+    email: e.target.elements.email.value,
+    phoneNumber:e.target.elements.phone.value,
+    firstField:firstField,
+    secondField:secondField,
+	})
+	.then(response => {
+		console.log(response.data);
+    if(response.data.code == 200){
+      Swal.fire(
+        'Good job!',
+        'Your Submission has been sent!',
+        'success',
+  
+      )
+    }
+	})
+	.catch(function (error) {
+		console.error(error);
+	});
+
+    
   };
   return (
 
@@ -73,7 +104,6 @@ const Form = () => {
     </div>
     <div class="form-group">
       <div className='email'>
-
       <label for="email">Email Address <span>*</span></label>
       <input type="email" placeholder='Enter your E-mail' id="email" name="email" required/>
       </div>
@@ -97,6 +127,7 @@ const Form = () => {
   <option value="4">Graphic Design Theory </option>
   <option value="5">Introduction to UI/UX Design</option>
   <option value="6">Linux</option>
+
 
 </select>
 
