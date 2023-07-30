@@ -1,4 +1,5 @@
 import React from 'react'
+import {BsCaretDownFill} from "react-icons/bs"
 const Form = () => {
   return (
     <div>
@@ -37,18 +38,31 @@ const Form = () => {
     <div class="form-group">
       <div className='fields'>
         <label for="training">Training Fields <span>*</span></label>
-      <select id="training" placeholder='You can only choose 2 trainings' name="training" required>
-        <option value="field1">Field 1</option>
-        <option value="field2">Field 2</option>
-        <option value="field3">Field 3</option>
+        <div className='hh'>
+           <select id="training" placeholder='You can only choose 2 trainings' name="training" required>
+      <option value="0">Choose your first Field</option>
+        <option value="field1">Python</option>
+        <option value="field2">3D Design</option>
+        <option value="field3">Web Dev</option>
+        <option value="field3">Introduction to UI/UX Design</option>
+        <option value="field3">Introduction to Ai and Data Science</option>
       </select>
+      <BsCaretDownFill id='arrow' />
+        </div>
+     
       </div>
       
     </div>
     <div class="form-group">
-      <div className='file'>
-        <label for="additional">Anything to Add <span>*</span></label>
-      <input type="file" />
+      <div className='fields'>
+        <label for="training">Training Fields <span>*</span></label>
+      <select>
+  <option selected value="0">Pure CSS Select</option>
+  <option value="1">No Wrapper</option>
+  <option value="2">No JS</option>
+  <option value="3">Nice!</option>
+</select>
+
       </div>
       
     </div>
@@ -58,6 +72,7 @@ const Form = () => {
   </form>
 
 
+    
     </div>
   )
 }
