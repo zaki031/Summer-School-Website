@@ -53,6 +53,7 @@ const Form = () => {
       phoneNumber:e.target.elements.phone.value,
       firstField:firstField,
       second_Field:secondField,
+      where:where
 
 
     });
@@ -66,6 +67,7 @@ const Form = () => {
     phoneNumber:e.target.elements.phone.value,
     firstField:firstField,
     secondField:secondField,
+    where:where
 	})
 	.then(response => {
 		console.log(response.data);
@@ -76,6 +78,14 @@ const Form = () => {
         'success',
   
       )
+    }
+    if(response.data.code == 429){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: '',
+        footer: '<a href="">Why do I have this issue?</a>'
+      })
     }
 	})
 	.catch(function (error) {
