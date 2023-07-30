@@ -17,7 +17,7 @@ function App() {
   }, []);
   return (
     <div className="App">  
-    <img src={circles} alt='circles' id="circles"></img>
+    <img src={circles} data-aos="fade-up" alt='circles' id="circles"></img>
     <div className='container'>
     <img src={points} data-aos="zoom-in" id='p1' alt="img"></img>
     <img src={points} data-aos="zoom-in" id='p2'alt="img"></img>
@@ -29,7 +29,7 @@ function App() {
     <img id="register"  data-aos="fade-up"  src={register}  alt='register ' />
     <img id="palm"  data-aos="fade-right" src={palm}  alt='background ' />
 
-    <img id="bg"  src={background}  alt='background ' />
+    <img id="bg" data-aos="zoom-in"  src={background}  alt='background ' />
     <div className='h' data-aos="fade-up">
     <p >to be a part of this amazing summer.</p>
 
@@ -42,7 +42,14 @@ function App() {
     <Form/>
     <br/>
     
-    <div className='f-p' >    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div className='f-p' >    <p >
+    Le club Open Minds est un club scientifique estudiantin de l4USTHB crée en 2009.<br/>
+ROLE: OMC  Seul représentant Algérien, leader au sein du réseau "CLEF".<br/>
+But : Promouvoir le libre open source en Algérie et cultiver l'entraide étudiante.<br/>
+Notre slogan : Se qui ne se partage pas se perd <br/>
+
+L'OMC ne se limite pas à être une simple organisation, c'est une famille unie où chaque membre a l'opportunité de vivre des expériences uniques et enrichissantes.
+    </p>
 </div>
 <div className='social'>
         <a href="" data-aos="fade-right"><FaFacebookF/></a>
