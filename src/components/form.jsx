@@ -1,11 +1,15 @@
 import React from 'react'
 import {BsCaretDownFill} from "react-icons/bs"
 const Form = () => {
+
+  const handleSubmit = () => {
+    console.log("test");
+  };
   return (
     <div>
 
 
-<form class="form-grid">
+<form class="form-grid" onSubmit={handleSubmit()}>
     <div class="form-group">
       <div className='firstname'>
       <label for="fullname"  >Full Name <span>*</span></label>
@@ -37,30 +41,31 @@ const Form = () => {
     </div>
     <div class="form-group">
       <div className='fields'>
-        <label for="training">Training Fields <span>*</span></label>
-        <div className='hh'>
-           <select id="training" placeholder='You can only choose 2 trainings' name="training" required>
-      <option value="0">Choose your first Field</option>
-        <option value="field1">Python</option>
-        <option value="field2">3D Design</option>
-        <option value="field3">Web Dev</option>
-        <option value="field3">Introduction to UI/UX Design</option>
-        <option value="field3">Introduction to Ai and Data Science</option>
-      </select>
-      <BsCaretDownFill id='arrow' />
-        </div>
-     
+        <label for="training">First Training Field <span>*</span></label>
+        <select>
+  <option selected value="0">Select your first field</option>
+  <option value="1">Web Dev</option>
+  <option value="2">Introductionto Ai and Data Science</option>
+  <option value="3">3D deisgn </option>
+  <option value="3">Graphic Design Theory </option>
+  <option value="3">Introduction to UI/UX Design</option>
+
+</select>
+
       </div>
       
     </div>
     <div class="form-group">
       <div className='fields'>
-        <label for="training">Training Fields <span>*</span></label>
+        <label for="training">Second Training Field <span>*</span></label>
       <select>
-  <option selected value="0">Pure CSS Select</option>
-  <option value="1">No Wrapper</option>
-  <option value="2">No JS</option>
-  <option value="3">Nice!</option>
+  <option selected value="0">Select your second field</option>
+  <option value="1">Web Dev</option>
+  <option value="2">Introductionto Ai and Data Science</option>
+  <option value="3">3D deisgn </option>
+  <option value="3">Graphic Design Theory </option>
+  <option value="3">Introduction to UI/UX Design</option>
+
 </select>
 
       </div>
