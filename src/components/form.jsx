@@ -8,27 +8,7 @@ import 'aos/dist/aos.css'
 
 const Form = () => {
   
-  const [formData, setFormData] = useState({
-    
-    fullName: '',
-    discordID:'',
-    email: '',
-    phoneNumber: '',
-    firstField: '',
-    second_Field: '',
-  });
-  const meanings = {
-    '1': "Web Dev",
-    '2': "Introductionto Ai and Data Science",
-    '3': "3D Design",
-    '4': "Graphic Design Theory",
-    '5': "Introduction to UI/UX Design",
-    '6': "Linux",
 
-    // Add more meanings as needed
-  };
-
- 
 
   const [firstField, setfirstField] = useState('');
   const [secondField, setsecondField] = useState('');
@@ -47,18 +27,7 @@ const Form = () => {
             console.log(error.text);
         });
         
-    e.preventDefault();
-    setFormData({
-      fullName: e.target.elements.fullname.value,
-      discordID: e.target.elements.discord.value,
-      email: e.target.elements.from_email.value,
-      phoneNumber:e.target.elements.phone.value,
-      firstField:firstField,
-      second_Field:secondField,
-      where:where
-
-
-    });
+  
     
     console.log(form)
     axios

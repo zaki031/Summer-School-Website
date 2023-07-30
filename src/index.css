@@ -185,6 +185,8 @@ body{
   justify-content: center;
   display: flex;
   gap: 15px;
+  padding-bottom: 100px;
+  margin-top: 70px;
 }
 .social a{
   text-decoration: none;
@@ -192,8 +194,8 @@ body{
   font-size: 1.5rem;
   background: #1887B4;
   border-radius: 50%;
-  padding: 8px;
-  
+  padding: 12px; padding-bottom: 8px;
+ 
 }
 
 

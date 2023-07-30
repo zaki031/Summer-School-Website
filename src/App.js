@@ -41,14 +41,17 @@ function App() {
     </div>
     <Form/>
     <br/>
+    
     <div className='f-p' >    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-    <div className='social'>
-        <a href=""><FaFacebookF/></a>
-        <a href=""><FaInstagram/></a>
-        <a href=""><FaLinkedinIn/></a>
-        <a href=""><FaTwitter/></a>
+<div className='social'>
+        <a href="" data-aos="fade-right"><FaFacebookF/></a>
+        <a href="" data-aos="fade-up"><FaInstagram/></a>
+        <a href="" data-aos="fade-up"><FaLinkedinIn/></a>
+        <a href=""data-aos="fade-left"><FaTwitter/></a>
     </div>
+   
+    
 
     
     
