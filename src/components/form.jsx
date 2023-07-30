@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Form = () => {
   
@@ -28,25 +30,26 @@ const Form = () => {
 
   const [firstField, setfirstField] = useState('');
   const [secondField, setsecondField] = useState('');
+  const [where, setWhere] = useState('');
+
   const apiKey = process.env.REACT_APP_API_URL;
+  const form = useRef();
 
-  // Step 3: Event handler to capture the selected value
-  const handleFirstFieldInputChange = (event) => {
-    const value = event.target.value;
-    setfirstField(meanings[value]);
-  };
-  const handlesecondFieldInputChange = (event) => {
-    const value = event.target.value;
-    setsecondField(meanings[value]);
-  };
-
-
-  const handleSubmit = (e) => {
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_22iprxm', 'template_mpxi08e', form.current, 'FF57SXaLLS0bpfMdi')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        
     e.preventDefault();
     setFormData({
       fullName: e.target.elements.fullname.value,
       discordID: e.target.elements.discord.value,
-      email: e.target.elements.email.value,
+      email: e.target.elements.from_email.value,
       phoneNumber:e.target.elements.phone.value,
       firstField:firstField,
       second_Field:secondField,
@@ -54,12 +57,12 @@ const Form = () => {
 
     });
     
-
+    console.log(form)
     axios
 	.post(apiKey, {
     fullName: e.target.elements.fullname.value,
     discordID: e.target.elements.discord.value,
-    email: e.target.elements.email.value,
+    email: e.target.elements.from_email.value,
     phoneNumber:e.target.elements.phone.value,
     firstField:firstField,
     secondField:secondField,
@@ -79,15 +82,35 @@ const Form = () => {
 		console.error(error);
 	});
 
-    
+
+
+
+
+    };
+
+  // Step 3: Event handler to capture the selected value
+  const handleFirstFieldInputChange = (event) => {
+    const value = event.target.value;
+    setfirstField(meanings[value]);
   };
+  const handlesecondFieldInputChange = (event) => {
+    const value = event.target.value;
+    setsecondField(meanings[value]);
+  };
+  const handleWhereInputChange = (event) => {
+    const value = event.target.value;
+    setWhere(value);
+  };
+
+
+  
   return (
 
     
     <div>
 
 
-<form class="form-grid" onSubmit={handleSubmit} >
+<form class="form-grid" ref={form} onSubmit={sendEmail}  >
     <div class="form-group">
       <div className='firstname'>
       <label for="fullname"  >Full Name <span>*</span></label>
@@ -105,7 +128,7 @@ const Form = () => {
     <div class="form-group">
       <div className='email'>
       <label for="email">Email Address <span>*</span></label>
-      <input type="email" placeholder='Enter your E-mail' id="email" name="email" required/>
+      <input type="email" placeholder='Enter your E-mail' id="email" name="from_email" required/>
       </div>
 
     </div>
@@ -120,13 +143,15 @@ const Form = () => {
       <div className='fields'>
         <label for="training">First Training Field <span>*</span></label>
         <select name="firstField" value={firstField} onChange={handleFirstFieldInputChange}>
+
   <option selected value="0">Select your first field</option>
-  <option value="1">Web Dev</option>
+  <option value="w">Web Dev</option>
   <option value="2">Introductionto Ai and Data Science</option>
   <option value="3">3D deisgn </option>
   <option value="4">Graphic Design Theory </option>
   <option value="5">Introduction to UI/UX Design</option>
   <option value="6">Linux</option>
+  
 
 
 </select>
@@ -150,8 +175,24 @@ const Form = () => {
       </div>
       
     </div>
+
+    <div class="form-group">
+      <div className='fields'>
+        <label for="training">Where did you hear about us? <span>*</span></label>
+      <select name='secondField' value={where} onChange={handleWhereInputChange}>
+  <option selected value="0">Select your second field</option>
+  <option value="Instgram">Instgram</option>
+  <option value="Discord">Discord</option>
+  <option value="LinkedIn">LinkedIn</option>
+  <option value="Friend">A friend</option>
+
+</select>
+
+      </div>
+      
+    </div>
     <div class="submit-btn">
-      <button type="submit">Register</button>
+      <button type="submit"  >Register</button>
     </div>
   </form>
 
