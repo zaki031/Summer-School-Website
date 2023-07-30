@@ -105,6 +105,12 @@ form{
   font-size: 16px;
   border: none;
   border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.submit-btn button:hover{
+  background-color: #fd9b32;
+
 }
 label{
   color: #586166;

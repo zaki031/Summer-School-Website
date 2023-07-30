@@ -8,7 +8,13 @@ import Form from "./components/form"
 import circles from "./images/circles.png"
 import points from "./images/points.png"
 import {FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter} from "react-icons/fa"
+import { useEffect } from "react";
+import AOS from "aos";
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="App">  
     <img src={circles} alt='circles' id="circles"></img>
@@ -17,7 +23,7 @@ function App() {
     <img src={points} id='p2'alt="img"></img>
     <img src={points} id='p3'alt="img"></img>
     <img src={points} id='p4'alt="img"></img>
-    <img id="logo"  src={logo}  alt='logo' />
+    <img id="logo" data-aos="fade-up"  src={logo}  alt='logo' />
 
 
     <img id="register"  src={register}  alt='register ' />

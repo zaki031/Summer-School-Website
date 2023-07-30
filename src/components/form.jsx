@@ -101,11 +101,11 @@ const Form = () => {
   // Step 3: Event handler to capture the selected value
   const handleFirstFieldInputChange = (event) => {
     const value = event.target.value;
-    setfirstField(meanings[value]);
+    setfirstField(value);
   };
   const handlesecondFieldInputChange = (event) => {
     const value = event.target.value;
-    setsecondField(meanings[value]);
+    setsecondField(value);
   };
   const handleWhereInputChange = (event) => {
     const value = event.target.value;
@@ -155,12 +155,12 @@ const Form = () => {
         <select name="firstField" value={firstField} onChange={handleFirstFieldInputChange}>
 
   <option selected value="0">Select your first field</option>
-  <option value="w">Web Dev</option>
-  <option value="2">Introductionto Ai and Data Science</option>
-  <option value="3">3D deisgn </option>
-  <option value="4">Graphic Design Theory </option>
-  <option value="5">Introduction to UI/UX Design</option>
-  <option value="6">Linux</option>
+  <option value="Web Dev">Web Dev</option>
+  <option value="Introduction to Ai and Data Science">Introduction to Ai and Data Science</option>
+  <option value="3D deisgn">3D deisgn </option>
+  <option value="Graphic Design Theory">Graphic Design Theory </option>
+  <option value="Introduction to UI/UX Design">Introduction to UI/UX Design</option>
+  <option value="Linux">Linux</option>
   
 
 
@@ -174,12 +174,12 @@ const Form = () => {
         <label for="training">Second Training Field <span>*</span></label>
       <select name='secondField' value={secondField} onChange={handlesecondFieldInputChange}>
   <option selected value="0">Select your second field</option>
-  <option value="1">Web Dev</option>
-  <option value="2">Introductionto Ai and Data Science</option>
-  <option value="3">3D deisgn </option>
-  <option value="4">Graphic Design Theory </option>
-  <option value="5">Introduction to UI/UX Design</option>
-  <option value="6">Linux</option>
+  <option value="Web Dev">Web Dev</option>
+  <option value="Introductionto Ai and Data Science">Introductionto Ai and Data Science</option>
+  <option value="3D deisgn">3D deisgn </option>
+  <option value="Graphic Design Theory">Graphic Design Theory </option>
+  <option value="Introduction to UI/UX Design">Introduction to UI/UX Design</option>
+  <option value="Linux">Linux</option>
 </select>
 
       </div>
