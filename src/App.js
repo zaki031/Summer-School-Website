@@ -25,13 +25,7 @@ function App() {
 
         <link rel="icon" type="image/png" href={omclogo} />
 
-        <meta name="description" content=" Open Minds est un club scientifique estudiantin de l'USTHB crée en 2009.
-OMC  est le seul représentant Algérien, leader au sein du réseau 
-Son but est de promouvoir le libre open source en Algérie et cultiver l'entraide étudiante
-
-Se qui ne se partage pas se perd
-
-L'OMC ne se limite pas à être une simple organisation, c'est une famille unie où chaque membre a l'opportunité de vivre des expériences uniques et enrichissantes" />
+        <meta name="description" content="Welcome to OMC's Summer School" />
       </Helmet>
     
     <img src={circles} data-aos="fade-up" alt='circles' id="circles"></img>
