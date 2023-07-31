@@ -20,7 +20,7 @@ const Form = () => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('service_22iprxm', 'template_mpxi08e', form.current, 'FF57SXaLLS0bpfMdi')
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_KEY, process.env.REACT_APP_TEMPLATE_KEY, form.current, process.env.REACT_APP_EMAILJS_API_KEY)
         .then((result) => {
             console.log(result.text);
         }, (error) => {

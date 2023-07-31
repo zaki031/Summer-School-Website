@@ -43,12 +43,7 @@ function App() {
     <br/>
     
     <div className='f-p' >    <p >
-    Le club Open Minds est un club scientifique estudiantin de l4USTHB crée en 2009.<br/>
-ROLE: OMC  Seul représentant Algérien, leader au sein du réseau "CLEF".<br/>
-But : Promouvoir le libre open source en Algérie et cultiver l'entraide étudiante.<br/>
-Notre slogan : Se qui ne se partage pas se perd <br/>
-
-L'OMC ne se limite pas à être une simple organisation, c'est une famille unie où chaque membre a l'opportunité de vivre des expériences uniques et enrichissantes.
+    En 2009, des étudiants ont organisé la première Install Party en Algérie, donnant naissance au club Open Minds, qui depuis 15 ans promeut l'esprit de partage et de collaboration lié au Libre et à l'Open Source avec le slogan "Ce qui ne se partage pas se perd". En tant que membre de CLEF, l'OMC joue un rôle essentiel en promouvant les valeurs du Libre au sein de la communauté estudiantine en Algérie et à l'échelle internationale, étendant ainsi son influence dans la promotion du Libre à l'échelle internationale
     </p>
 </div>
 <div className='social'>
