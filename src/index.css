@@ -191,10 +191,10 @@ body{
 .social a{
   text-decoration: none;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   background: #1887B4;
   border-radius: 50%;
-  padding: 12px; padding-bottom: 8px;
+  padding: 12px; padding-bottom: 5px;
  
 }
 
@@ -202,8 +202,9 @@ body{
 .f-p p{
   text-align: center;
   margin-right: auto;margin-left: auto;
-  max-width: 1300px;
-  font-size: 1.5rem;
+  max-width: 1500px;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 
@@ -264,7 +265,7 @@ rgba(235, 235, 235, 0.397);
 
 
 @media only screen and (max-width: 600px) {
-  body{
+  *{
     overflow-x: hidden;
   }
 
@@ -283,5 +284,18 @@ rgba(235, 235, 235, 0.397);
   #bg{
     max-width: 100%;
   }
+  .f-p p{
+    text-align: center;
+    margin-right: auto;margin-left: auto;
+    max-width:300px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 
+  .social a{
+    font-size: 1.2rem;
+    padding: 12px; padding-bottom: 5px;
+   
+  }
+  
 }
