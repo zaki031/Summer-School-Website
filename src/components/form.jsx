@@ -9,7 +9,6 @@ import 'aos/dist/aos.css'
 const Form = () => {
   
 
-
   const [firstField, setfirstField] = useState('');
   const [secondField, setsecondField] = useState('');
   const [where, setWhere] = useState('');
@@ -18,6 +17,7 @@ const Form = () => {
   const form = useRef();
 
     const sendEmail = (e) => {
+      
       e.preventDefault();
   
       emailjs.sendForm(process.env.REACT_APP_SERVICE_KEY, process.env.REACT_APP_TEMPLATE_KEY, form.current, process.env.REACT_APP_EMAILJS_API_KEY)
@@ -27,8 +27,11 @@ const Form = () => {
             console.log(error.text);
         });
         
+
+        
   
-    
+        
+         
     console.log(form)
     axios
 	.post(apiKey, {
@@ -60,7 +63,7 @@ const Form = () => {
     }
 	})
 	.catch(function (error) {
-		console.error(error);
+		console.error(error.text);
 	});
 
 
