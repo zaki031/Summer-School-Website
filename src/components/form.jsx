@@ -47,8 +47,8 @@ const Form = () => {
 		console.log(response.data);
     if(response.data.code == 200){
       Swal.fire(
-        'Good job!',
-        'Your Submission has been sent!',
+        'You Got Accepted in Summer School!',
+        'Check your email!',
         'success',
   
       )
