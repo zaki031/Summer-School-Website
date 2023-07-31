@@ -131,10 +131,9 @@ const Form = () => {
   <option selected value="0">Select your first field</option>
   <option value="Web Dev">Web Dev</option>
   <option value="Introduction to Ai and Data Science">Introduction to Ai and Data Science</option>
-  <option value="3D deisgn">3D deisgn </option>
-  <option value="Graphic Design Theory">Graphic Design Theory </option>
+  <option value="3D deisgn">3D design </option>
   <option value="Introduction to UI/UX Design">Introduction to UI/UX Design</option>
-  <option value="Linux">Linux</option>
+  <option value="Linux">Linux and Git</option>
   
 
 
@@ -150,10 +149,9 @@ const Form = () => {
   <option selected value="0">Select your second field</option>
   <option value="Web Dev">Web Dev</option>
   <option value="Introductionto Ai and Data Science">Introductionto Ai and Data Science</option>
-  <option value="3D deisgn">3D deisgn </option>
-  <option value="Graphic Design Theory">Graphic Design Theory </option>
+  <option value="3D deisgn">3D design </option>
   <option value="Introduction to UI/UX Design">Introduction to UI/UX Design</option>
-  <option value="Linux">Linux</option>
+  <option value="Linux">Linux and Git</option>
 </select>
 
       </div>
