@@ -42,9 +42,9 @@ function App() {
 
     <img id="bg" data-aos="zoom-in"  src={background}  alt='background ' />
     <div className='h' data-aos="fade-up">
-    <p >to be a part of this amazing summer.</p>
+    <p >To Be a Part of This Amazing Summer.</p>
 
-      <p id='h'>Fill the information carefully</p>
+      <p id='h'>Fill The Information Carefully</p>
     </div>
 
 
