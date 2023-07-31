@@ -58,7 +58,7 @@ const Form = () => {
         icon: 'error',
         title: 'Oops...',
         text: '',
-        footer: '<a href="">Why do I have this issue?</a>'
+        footer: '<a href="">You are allowed to register once in every minute</a>'
       })
     }
 	})
