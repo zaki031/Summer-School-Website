@@ -7,7 +7,7 @@ import palm from "./images/palm.png"
 import Form from "./components/form"
 import circles from "./images/circles.png"
 import points from "./images/points.png"
-import {FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter} from "react-icons/fa"
+import {FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter,FaDiscord} from "react-icons/fa"
 import { useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css'
@@ -43,14 +43,22 @@ function App() {
     <br/>
     
     <div className='f-p' >    <p >
-    En 2009, des étudiants ont organisé la première Install Party en Algérie, donnant naissance au club Open Minds, qui depuis 15 ans promeut l'esprit de partage et de collaboration lié au Libre et à l'Open Source avec le slogan "Ce qui ne se partage pas se perd". En tant que membre de CLEF, l'OMC joue un rôle essentiel en promouvant les valeurs du Libre au sein de la communauté estudiantine en Algérie et à l'échelle internationale, étendant ainsi son influence dans la promotion du Libre à l'échelle internationale
+    Open Minds est un club scientifique estudiantin de l'USTHB crée en 2009.<br/>
+OMC  est le seul représentant Algérien, leader au sein du réseau "CLEF".<br/>
+Son but est de promouvoir le libre open source en Algérie et cultiver l'entraide étudiante.<br/>
+
+Se qui ne se partage pas se perd (hada yji with different font)<br/>
+
+L'OMC ne se limite pas à être une simple organisation, c'est une famille unie où chaque membre a l'opportunité de vivre des expériences uniques et enrichissantes.<br/>
+
     </p>
 </div>
 <div className='social'>
-        <a href="" data-aos="fade-right"><FaFacebookF/></a>
-        <a href="" data-aos="fade-up"><FaInstagram/></a>
-        <a href="" data-aos="fade-up"><FaLinkedinIn/></a>
-        <a href=""data-aos="fade-left"><FaTwitter/></a>
+        <a href="https://www.facebook.com/openmindsclub/" data-aos="fade-right"><FaFacebookF/></a>
+        <a href="https://www.instagram.com/openmindsclub/" data-aos="fade-up"><FaInstagram/></a>
+        <a href="https://www.linkedin.com/company/open-minds-club" data-aos="fade-up"><FaLinkedinIn/></a>
+        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fclubopenminds%2F"data-aos="fade-left"><FaTwitter/></a>
+        <a href="https://discord.com/invite/xtr3xrT9hw" data-aos="fade-up"><FaDiscord/></a>
     </div>
    
     
