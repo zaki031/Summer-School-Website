@@ -32,7 +32,7 @@ const Form = () => {
     console.log(form)
     axios
 	.post(apiKey, {
-    fullName: e.target.elements.fullname.value,
+    fullName: e.target.elements.from_name.value,
     discordID: e.target.elements.discord.value,
     email: e.target.elements.from_email.value,
     phoneNumber:e.target.elements.phone.value,
@@ -95,7 +95,7 @@ const Form = () => {
     <div class="form-group">
       <div className='firstname' data-aos="fade-right">
       <label for="fullname"  >Full Name <span>*</span></label>
-      <input type="text" placeholder='Enter your fullname' id="fullname" name="fullname" required/>
+      <input type="text" placeholder='Enter your fullname' id="fullname" name="from_name" required/>
       </div>
       
     </div>

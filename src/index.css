@@ -295,7 +295,12 @@ rgba(235, 235, 235, 0.397);
   .social a{
     font-size: 1.2rem;
     padding: 12px; padding-bottom: 5px;
+    margin-top: 20px;
    
   }
   
+}
+
+#slogon{
+  color: #F68915;
 }
