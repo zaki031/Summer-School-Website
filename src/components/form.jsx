@@ -169,7 +169,7 @@ const Form = () => {
         <label for="training">Where did you hear about us? <span>*</span></label>
       <select name='secondField' value={where} onChange={handleWhereInputChange}>
   <option selected value="0">Select your second field</option>
-  <option value="Instgram">Instgram</option>
+  <option value="Instgram">Instagram</option>
   <option value="Discord">Discord</option>
   <option value="LinkedIn">LinkedIn</option>
   <option value="Friend">A friend</option>
