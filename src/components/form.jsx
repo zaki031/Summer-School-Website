@@ -20,7 +20,7 @@ const Form = () => {
       
       e.preventDefault();
   
-      emailjs.sendForm('service_b7opma9', 'template_ym1idum', form.current, 'MUgetXmC9S2oqb_04')
+      emailjs.sendForm('service_1z42x4e', 'template_245ptmc', form.current, '_Kqkcfp8BkQ0xWqoW')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
