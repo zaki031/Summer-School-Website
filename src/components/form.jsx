@@ -64,6 +64,12 @@ const Form = () => {
 	})
 	.catch(function (error) {
 		console.error(error.text);
+		Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: '',
+        footer: 'Error'
+      })
 	});
 
 
