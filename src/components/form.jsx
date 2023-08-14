@@ -20,7 +20,7 @@ const Form = () => {
       
       e.preventDefault();
   
-      emailjs.sendForm('service_5ryvdbq', 'template_uu4340e', form.current, 'TREIH7LvfDhmEzeA0')
+      emailjs.sendForm('service_key', 'template_key', form.current, 'emailJS_key')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -78,7 +78,6 @@ const Form = () => {
 
     };
 
-  // Step 3: Event handler to capture the selected value
   const handleFirstFieldInputChange = (event) => {
     const value = event.target.value;
     setfirstField(value);
