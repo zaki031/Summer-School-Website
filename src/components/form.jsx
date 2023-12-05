@@ -66,7 +66,7 @@ const Form = () => {
 		console.error(error.text);
 		Swal.fire({
         icon: 'error',
-        title: 'Oops...',
+        title: 'Registrations are closed :/',
         text: '',
         footer: 'Error'
       })
